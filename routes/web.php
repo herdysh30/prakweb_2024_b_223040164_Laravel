@@ -1,10 +1,12 @@
 <?php
 
-use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 
 Route::get('/', function () {
@@ -42,3 +44,7 @@ Route::get('/categories/{category:slug}', function(Category $category){
 Route::get('/contact', function () {
     return view('contact',['title' => 'Contact']);
 });
+
+Route::get('login', [LoginController::class, 'index']);
+
+Route::get('register', [RegisterController::class, 'index']);

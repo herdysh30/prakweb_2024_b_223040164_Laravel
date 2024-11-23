@@ -17,8 +17,13 @@
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">  
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
+              </div>
+            </div>
             <!-- Profile dropdown -->
-            <div class="relative ml-3">
+            {{-- <div class="relative ml-3">
               <div>
                 <button type="button" @click="isOpen = !isOpen" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
@@ -38,7 +43,7 @@
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
         <div class="-mr-2 flex md:hidden">
@@ -69,7 +74,7 @@
         <x-nav-link href='/contact' :active="request()->is('contact') ">Contact</x-nav-link>
         
       </div>
-      <div class="border-t border-gray-700 pb-3 pt-4">
+      {{-- <div class="border-t border-gray-700 pb-3 pt-4">
         <div class="flex items-center px-5">
           <div class="flex-shrink-0">
             <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
@@ -84,6 +89,6 @@
           <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
           <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out</a>
         </div>
-      </div>
+      </div> --}}
     </div>
   </nav>
