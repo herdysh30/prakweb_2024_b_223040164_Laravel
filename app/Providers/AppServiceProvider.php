@@ -23,4 +23,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::preventLazyLoading();
     }
+
+    public const HOME = '/';
 }
